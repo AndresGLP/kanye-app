@@ -29,4 +29,4 @@ Index.getInitialProps =async()=>{
 	return { quotes }
 }
 
-export default Index;
+export default Index;
