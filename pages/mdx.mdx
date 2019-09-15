@@ -1,3 +1,12 @@
+import {MDXProvider} from '@mdx-js/react';
+import components from '../components/mdx-components'
+
 #Hello from MDX
 
 This page is build with [MDX](https://mdxjs.com/)
+
+export default({children}) => {
+  <MDXProvider components={components}>
+    {children}
+  </MDXProvider>
+}
