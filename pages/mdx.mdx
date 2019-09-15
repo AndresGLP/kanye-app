@@ -1,3 +1,8 @@
+import Layout from '../components/Layout';
+import Content from '../components/Content';
+import Header from '../components/Header';
+import Card from '../components/Card'
+import Quote from '../components/Quote'
 import {MDXProvider} from '@mdx-js/react';
 import components from '../components/mdx-components';
 
@@ -7,6 +12,11 @@ This page is build with [MDX](https://mdxjs.com/)
 
 export default({children}) => {
   <MDXProvider components={components}>
-    {children}
+  <Layout>
+    <Content>
+      <Header>MDX Page</Header>
+      <Card>{children}</Card>
+    </Content>
+  </Layout>
   </MDXProvider>
 }
