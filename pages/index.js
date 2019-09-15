@@ -24,10 +24,14 @@ const Index=({quotes})=>(
 	</Layout>
 )
 
-Index.getInitialProps =async()=>{
+Index.getInitialProps =async({req})=>{
+	const getHost=path=>{
+			if (!req) return path
+			return req.headers.host+path;
+	}
 	const quotes = [
 		{...(await getQuote('https://api.kanye.rest')),id:'fetch'},
-		{...(await getQuote('https://localhost:3000/api/quote')),id:'api-routes'}
+		{...(await getQuote(getHost('api/quote'))),id:'api-routes'}
 	];
 
 	return { quotes }

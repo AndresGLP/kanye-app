@@ -13172,48 +13172,62 @@ var Index = function Index(_ref) {
 
 Index.getInitialProps =
 /*#__PURE__*/
-Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])(
-/*#__PURE__*/
-_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-  var quotes;
-  return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-    while (1) {
-      switch (_context.prev = _context.next) {
-        case 0:
-          _context.t0 = _babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_1__["default"];
-          _context.t1 = {};
-          _context.next = 4;
-          return Object(_lib_quotes_api__WEBPACK_IMPORTED_MODULE_9__["getQuote"])('https://api.kanye.rest');
+function () {
+  var _ref4 = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  /*#__PURE__*/
+  _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(_ref3) {
+    var req, getHost, quotes;
+    return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            req = _ref3.req;
 
-        case 4:
-          _context.t2 = _context.sent;
-          _context.t3 = {
-            id: 'fetch'
-          };
-          _context.t4 = (0, _context.t0)(_context.t1, _context.t2, _context.t3);
-          _context.t5 = _babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_1__["default"];
-          _context.t6 = {};
-          _context.next = 11;
-          return Object(_lib_quotes_api__WEBPACK_IMPORTED_MODULE_9__["getQuote"])('https://localhost:3000/api/quote');
+            getHost = function getHost(path) {
+              if (!req) return path;
+              return req.headers.host + path;
+            };
 
-        case 11:
-          _context.t7 = _context.sent;
-          _context.t8 = {
-            id: 'api-routes'
-          };
-          _context.t9 = (0, _context.t5)(_context.t6, _context.t7, _context.t8);
-          quotes = [_context.t4, _context.t9];
-          return _context.abrupt("return", {
-            quotes: quotes
-          });
+            _context.t0 = _babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_1__["default"];
+            _context.t1 = {};
+            _context.next = 6;
+            return Object(_lib_quotes_api__WEBPACK_IMPORTED_MODULE_9__["getQuote"])('https://api.kanye.rest');
 
-        case 16:
-        case "end":
-          return _context.stop();
+          case 6:
+            _context.t2 = _context.sent;
+            _context.t3 = {
+              id: 'fetch'
+            };
+            _context.t4 = (0, _context.t0)(_context.t1, _context.t2, _context.t3);
+            _context.t5 = _babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_1__["default"];
+            _context.t6 = {};
+            _context.next = 13;
+            return Object(_lib_quotes_api__WEBPACK_IMPORTED_MODULE_9__["getQuote"])(getHost('api/quote'));
+
+          case 13:
+            _context.t7 = _context.sent;
+            _context.t8 = {
+              id: 'api-routes'
+            };
+            _context.t9 = (0, _context.t5)(_context.t6, _context.t7, _context.t8);
+            quotes = [_context.t4, _context.t9];
+            return _context.abrupt("return", {
+              quotes: quotes
+            });
+
+          case 18:
+          case "end":
+            return _context.stop();
+        }
       }
-    }
-  }, _callee);
-}));
+    }, _callee);
+  }));
+
+  return function (_x) {
+    return _ref4.apply(this, arguments);
+  };
+}();
+
 /* harmony default export */ __webpack_exports__["default"] = (Index);
 
 /***/ }),
